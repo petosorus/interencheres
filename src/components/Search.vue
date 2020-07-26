@@ -82,4 +82,11 @@ export default {
   .result-list {
     width: 50%;
   }
+  
+  input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
 </style>

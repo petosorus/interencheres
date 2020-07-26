@@ -16,8 +16,8 @@
           <textarea type="text" v-model="item.description"></textarea>
         </label>
       </div>
-      <button @click="newItem">Nouveau lot</button>
-      <button type="submit" @click="save">Enregistrer</button>
+      <button class="newItem" @click="newItem">Nouveau lot</button>
+      <button @click="save">Enregistrer</button>
     <!-- </form> -->
   </div>
 </template>
@@ -63,7 +63,38 @@ export default {
 
 <style scoped>
   label {
-    display: block;
+    display: grid;
+  }
+
+  input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #42b983;
+    border: none;
+    color: white;
+    padding: 1rem;
+    margin-right: 5px;
+  }
+
+  .newItem {
+    background-color: white;
+    color: #2c3e50;
+  }
+
+  .newItem:hover {
+    background-color: lightgrey;
   }
 
   .item {
