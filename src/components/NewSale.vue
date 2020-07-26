@@ -1,22 +1,22 @@
 <template>
-  <div class="hello">
+  <div class="view">
     <h1>Nouvelle vente</h1>
     <!-- <form> -->
       <label for="title">Titre de la vente
         <input id="title" name="title" type="text" v-model="sale.title">
       </label>
 
-      <label for="description">description
+      <label for="description">Description de la vente
         <textarea id="description" name="description" type="text" v-model="sale.description">
         </textarea>
       </label>
 
-      <div v-for="(item, index) in items" :key=index>
-        <label>Description de l'objet
+      <div v-for="(item, index) in items" :key=index class="item">
+        <label>Description du lot
           <textarea type="text" v-model="item.description"></textarea>
         </label>
       </div>
-      <button @click="newItem">Nouvel objet</button>
+      <button @click="newItem">Nouveau lot</button>
       <button type="submit" @click="save">Enregistrer</button>
     <!-- </form> -->
   </div>
@@ -33,7 +33,9 @@ export default {
         title: '',
         description: ''
       },
-      items: []
+      items: [{
+        description: ''
+      }]
     }
   },
   methods: {
@@ -62,5 +64,11 @@ export default {
 <style scoped>
   label {
     display: block;
+  }
+
+  .item {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: solid 1px grey;
   }
 </style>

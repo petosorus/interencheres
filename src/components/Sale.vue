@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="view">
     <h1>{{ sale.title }}</h1>
 
     <p>{{ sale.description }}</p>

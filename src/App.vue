@@ -5,11 +5,10 @@
       <iframe  src="https://www.youtube.com/embed/MS8OawQegYE?autoplay=1&controls=0&rel=0&showinfo=0" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
     </div>
 
-    <span  v-else>
+    <span v-else class="layout">
       <div id="nav">
-        <router-link to="/">Recherche</router-link>
-        <router-link to="/newSale">Nouvelle vente</router-link>
         <router-link to="/search">Recherche</router-link>
+        <router-link to="/newSale">Nouvelle vente</router-link>
       </div>
       <router-view/>
     </span>
@@ -49,16 +48,30 @@ export default {
 
 #nav {
   padding: 30px;
+  width: 20%;
+}
+
+.view {
+  width: 100%;
 }
 
 #nav a {
   font-weight: bold;
   color: #2c3e50;
   display: block;
+  margin-bottom: 10px;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+</style>
+
+<style scoped>
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100%
 }
 
 iframe {

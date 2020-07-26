@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <label>Recherche
-      <input type="text" v-model="searchTerms">
-    </label>
+  <div class="view">
+    
+    <h1>Recherche</h1>
+
+    <input type="text" v-model="searchTerms">
 
     <div class="results">
       <div class="result-list">
@@ -78,7 +79,7 @@ export default {
     display: flex;
   }
 
-  .results-list {
-    flex-basis: 50%;
+  .result-list {
+    width: 50%;
   }
 </style>
