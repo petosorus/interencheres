@@ -83,10 +83,24 @@ export default {
     width: 50%;
   }
   
-  input[type=text] {
+  input {
     width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 12px;
+    margin: 8px;
     box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+    .results {
+      flex-direction: column;
+    }
+
+    .result-list {
+      width: 100%;
+    }
+
+    input {
+      width: 95%;
+    }
   }
 </style>

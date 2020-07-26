@@ -45,19 +45,22 @@ export default {
       })
     },
     save() {
+      const itemPromises = []
+
       axios.post("http://localhost:3000/sales", this.sale)
         .then(response => {
+          const sale_id = response.data.id
             if(this.items.length > 0) {
-            const sale_id = response.data.id
-
+            
             this.items.forEach(item => {
               item.sale_id = sale_id
-              axios.post("http://localhost:3000/items", item)  
+              itemPromises.push( axios.post("http://localhost:3000/items", item))
             })
           }
-        })
 
-        this.$router.push(`/sale/${sale_id}`)
+          Promise.all(itemPromises)
+          .then(() => this.$router.push(`/sale/${sale_id}`))
+        })
     }
   }
 }
@@ -68,14 +71,7 @@ export default {
     display: grid;
   }
 
-  input[type=text] {
-    width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-
-  textarea {
+  input, textarea {
     width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -103,5 +99,20 @@ export default {
     margin-top: 5px;
     padding-top: 5px;
     border-top: solid 1px grey;
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    .results {
+      flex-direction: column;
+    }
+
+    .result-list {
+      width: 100%;
+    }
+
+    input, textarea {
+      width: 95%;
+    }
   }
 </style>

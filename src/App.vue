@@ -46,6 +46,12 @@ export default {
   color: #2c3e50;
 }
 
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100%
+}
+
 #nav {
   padding: 30px;
   width: 20%;
@@ -53,6 +59,22 @@ export default {
 
 .view {
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #nav {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+  }
 }
 
 #nav a {
@@ -68,12 +90,6 @@ export default {
 </style>
 
 <style scoped>
-.layout {
-  display: flex;
-  flex-direction: row;
-  height: 100%
-}
-
 iframe {
   width: 100%;
   height: 100%;
