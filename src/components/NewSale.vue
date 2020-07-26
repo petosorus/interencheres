@@ -56,6 +56,8 @@ export default {
             })
           }
         })
+
+        this.$router.push(`/sale/${sale_id}`)
     }
   }
 }
