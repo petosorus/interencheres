@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link to="/">Recherche</router-link>
       <router-link to="/newSale">Nouvelle vente</router-link>
+      <router-link to="/search">Recherche</router-link>
     </div>
     <router-view/>
   </div>

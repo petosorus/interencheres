@@ -3,15 +3,11 @@ import VueRouter from 'vue-router'
 
 import Sale from '../components/Sale.vue'
 import NewSale from '../components/NewSale.vue'
+import Search from '../components/Search.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Search',
-  //   component: Search
-  // },
   {
     path: '/sale/:id',
     name: 'Sale',
@@ -21,6 +17,11 @@ Vue.use(VueRouter)
     path: '/newSale',
     name: 'NewSale',
     component: NewSale
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search
   }
 ]
 
