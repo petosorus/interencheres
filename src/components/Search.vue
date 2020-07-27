@@ -62,8 +62,8 @@ export default {
   },
   methods: {
     async search(searchTerms) {
-      const getSales = axios.get(`${SERVER_URL}/sales?q=${searchTerms}`)
-      const getItems = axios.get(`${SERVER_URL}/items?q=${searchTerms}`)
+      const getSales = axios.get(`${process.env.VUE_APP_SERVER_URL}/sales?q=${searchTerms}`)
+      const getItems = axios.get(`${process.env.VUE_APP_SERVER_URL}/items?q=${searchTerms}`)
 
       const responses = await Promise.all([getSales, getItems])
       this.sales = responses[0].data

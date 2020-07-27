@@ -45,13 +45,13 @@ export default {
       })
     },
     async save() {
-      const saleData = await axios.post(`${SERVER_URL}/sales`, this.sale)
+      const saleData = await axios.post(`${process.env.VUE_APP_SERVER_URL}/sales`, this.sale)
       const saleId = saleData.data.id
         if(this.items.length > 0) {
         
         await Promise.all(this.items.map(item => {
           item.sale_id = saled
-          return axios.post(`${SERVER_URL}/items`, item)
+          return axios.post(`${process.env.VUE_APP_SERVER_URL}/items`, item)
         }))
       }
 
