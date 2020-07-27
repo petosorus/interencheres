@@ -6,10 +6,10 @@
     </div>
 
     <span v-else class="layout">
-      <div id="nav">
+      <nav>
         <router-link to="/search">Recherche</router-link>
         <router-link to="/newSale">Nouvelle vente</router-link>
-      </div>
+      </nav>
       <router-view/>
     </span>
   </div>
