@@ -43,6 +43,7 @@ Cet unique champ de recherche sera capable de trouver des ventes et des lots, à
 
  - Actuellement, l'application n'est pas testée. C'est ok là parce que c'est chronophage et que c'est un one shot qui ne resservira pas, et n'aura pas d'évolutions. Pour le travail quotidien, les tests sont une bonne chose pour avoir une première validation du fonctionnement, éviter les régressions, et éventuellement lever des doutes sur un fonctionnement particulier.
  - J'ai hésité à mettre du typescript. Ca m'aurait aidé pour les nouvelles ventes je pense, où j'aurais pu juste appeler un constructeur. La class Sale aurait porté les valeurs par défaut, c'est plus propre. C'est plus sûr aussi dans le cas de Sale.vue, on ne fait pas d'erreur en assignant vm.sale et vm.items
+ - Il n'y a pas d'internationalisation. C'est plus parce qu'on est dans un proto, c'est mieux d'en avoir dans une vraie appli.
  - Le style est correct sans plus. Je n'ai pas été très inspiré.
  - Je n'ai pas mis de commentaires. Pour moi, un commentaire c'est une explication de pourquoi j'ai fait les choses quand je fais un truc bizarre. Ici je n'ai rien fait qui m'a paru étrange.
   
