@@ -37,22 +37,23 @@ Cet unique champ de recherche sera capable de trouver des ventes et des lots, à
 - Ajouter le konami code qui affiche un gif de votre choix
 
 
-## Remarques du candidat
+# Remarques du candidat
 
-### Manques
+## Manques
 
  - Actuellement, l'application n'est pas testée. C'est ok là parce que c'est chronophage et que c'est un one shot qui ne resservira pas, et n'aura pas d'évolutions. Pour le travail quotidien, les tests sont une bonne chose pour avoir une première validation du fonctionnement, éviter les régressions, et éventuellement lever des doutes sur un fonctionnement particulier.
  - J'ai hésité à mettre du typescript. Ca m'aurait aidé pour les nouvelles ventes je pense, où j'aurais pu juste appeler un constructeur. La class Sale aurait porté les valeurs par défaut, c'est plus propre. C'est plus sûr aussi dans le cas de Sale.vue, on ne fait pas d'erreur en assignant vm.sale et vm.items
  - Le style est correct sans plus. Je n'ai pas été très inspiré.
+ - Je n'ai pas mis de commentaires. Pour moi, un commentaire c'est une explication de pourquoi j'ai fait les choses quand je fais un truc bizarre. Ici je n'ai rien fait qui m'a paru étrange.
   
 
-### Ce que j'ai appris
+## Ce que j'ai appris
 
 - Je fais du VueJs depuis deux mois, donc j'ai mieux compris certains points. Je pense notamment à la guard/resolver interne au component Sale.vue pour charger les données avant affichage.
 - Monter un projet est toujours intéressant, je maîtrise mieux l'organisation du style entre composants.
 - J'ai (ré)appris à embed des (faux) gifs, et des vidéos, c'était amusant.
-- Je ne connaissais pas JSON-server, c'est très cool pour le proto, même si j'aurais aimé pouvoir faire des joins, notamment sur Sale et éviter les promesses parallèles. Ceci-dit, ça m'a appris Promise.all()
+- Je ne connaissais pas JSON-server, c'est très cool pour le proto, même si j'aurais aimé pouvoir faire des joins, notamment pour Sale.vue et éviter les promesses parallèles. Ceci-dit, ça m'a appris Promise.all()
 
-### En conclusion
+## En conclusion
 
 C'était intéressant :)
