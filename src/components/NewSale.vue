@@ -1,24 +1,24 @@
 <template>
   <div class="view">
     <h1>Nouvelle vente</h1>
-    <!-- <form> -->
+    <form @submit.prevent="save">
       <label for="title">Titre de la vente
-        <input id="title" name="title" type="text" v-model="sale.title">
+        <input id="title" name="title" type="text" v-model="sale.title" required>
       </label>
 
       <label for="description">Description de la vente
-        <textarea id="description" name="description" type="text" v-model="sale.description">
+        <textarea id="description" name="description" type="text" v-model="sale.description" required>
         </textarea>
       </label>
 
       <div v-for="(item, index) in items" :key=index class="item">
         <label>Description du lot
-          <textarea type="text" v-model="item.description"></textarea>
+          <textarea type="text" v-model="item.description" required></textarea>
         </label>
       </div>
       <button class="newItem" @click="newItem">Nouveau lot</button>
-      <button @click="save">Enregistrer</button>
-    <!-- </form> -->
+      <button type="submit">Enregistrer</button>
+    </form>
   </div>
 </template>
 
