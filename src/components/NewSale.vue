@@ -44,23 +44,18 @@ export default {
         description: ''
       })
     },
-    save() {
-      const itemPromises = []
+    async save() {
+      const saleData = await axios.post(`${SERVER_URL}/sales`, this.sale)
+      const saleId = saleData.data.id
+        if(this.items.length > 0) {
+        
+        await Promise.all(this.items.map(item => {
+          item.sale_id = saleId
+          return axios.post("http://localhost:3000/items", item)
+        }))
+      }
 
-      axios.post("http://localhost:3000/sales", this.sale)
-        .then(response => {
-          const sale_id = response.data.id
-            if(this.items.length > 0) {
-            
-            this.items.forEach(item => {
-              item.sale_id = sale_id
-              itemPromises.push( axios.post("http://localhost:3000/items", item))
-            })
-          }
-
-          Promise.all(itemPromises)
-          .then(() => this.$router.push(`/sale/${sale_id}`))
-        })
+      this.$router.push(`/sale/${saleId}`)
     }
   }
 }

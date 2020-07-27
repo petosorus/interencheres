@@ -61,15 +61,13 @@ export default {
     }
   },
   methods: {
-    search(searchTerms) {
+    async search(searchTerms) {
       const getSales = axios.get(`http://localhost:3000/sales?q=${searchTerms}`)
       const getItems = axios.get(`http://localhost:3000/items?q=${searchTerms}`)
 
-      Promise.all([getSales, getItems])
-      .then((responses) => {
-        this.sales = responses[0].data
-        this.items = responses[1].data
-      })
+      const responses = await Promise.all([getSales, getItems])
+      this.sales = responses[0].data
+      this.items = responses[1].data
     }
   }
 }
