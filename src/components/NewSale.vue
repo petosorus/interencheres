@@ -71,13 +71,6 @@ export default {
     display: grid;
   }
 
-  input, textarea {
-    width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-
   button {
     background-color: #42b983;
     border: none;
@@ -100,7 +93,6 @@ export default {
     padding-top: 5px;
     border-top: solid 1px grey;
   }
-
   
   @media screen and (max-width: 768px) {
     .results {
@@ -109,10 +101,6 @@ export default {
 
     .result-list {
       width: 100%;
-    }
-
-    input, textarea {
-      width: 95%;
     }
   }
 </style>

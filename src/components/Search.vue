@@ -82,14 +82,11 @@ export default {
   .result-list {
     width: 50%;
   }
-  
-  input {
-    width: 60%;
-    padding: 12px;
-    margin: 8px;
-    box-sizing: border-box;
-  }
 
+  li {
+    margin-bottom: 10px;
+  }
+  
   @media screen and (max-width: 768px) {
     .results {
       flex-direction: column;

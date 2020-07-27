@@ -1,0 +1,63 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+  }
+
+  a {
+    color: #2c3e50;
+  }
+  
+  .layout {
+    display: flex;
+    flex-direction: row;
+    height: 100%
+  }
+  
+  #nav {
+    padding: 30px;
+    width: 20%;
+  }
+
+  #nav a {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
+  
+  .view {
+    width: 100%;
+  }
+
+  input, textarea {
+    width: 60%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+    #nav {
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  
+    .layout {
+      display: flex;
+      flex-direction: column;
+      height: 100%
+    }
+
+    input, textarea {
+      width: calc(100% - 12px);
+    }
+  }
+  

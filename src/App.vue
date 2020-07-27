@@ -39,54 +39,7 @@ export default {
 }
 </script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-.layout {
-  display: flex;
-  flex-direction: row;
-  height: 100%
-}
-
-#nav {
-  padding: 30px;
-  width: 20%;
-}
-
-.view {
-  width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  #nav {
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .layout {
-    display: flex;
-    flex-direction: column;
-    height: 100%
-  }
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  display: block;
-  margin-bottom: 10px;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  @import url('assets/style.css');
 </style>
 
 <style scoped>
