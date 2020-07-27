@@ -15,18 +15,18 @@
     height: 100%
   }
   
-  #nav {
+  nav {
     padding: 30px;
     width: 20%;
   }
 
-  #nav a {
+  nav a {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
   }
   
-  #nav a.router-link-exact-active {
+  nav a.router-link-exact-active {
     color: #42b983;
   }
   
@@ -42,7 +42,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    #nav {
+    nav {
       padding: 0;
       width: 100%;
       display: flex;
