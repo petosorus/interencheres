@@ -50,8 +50,8 @@ export default {
         if(this.items.length > 0) {
         
         await Promise.all(this.items.map(item => {
-          item.sale_id = saleId
-          return axios.post("http://localhost:3000/items", item)
+          item.sale_id = saled
+          return axios.post(`${SERVER_URL}/items`, item)
         }))
       }
 

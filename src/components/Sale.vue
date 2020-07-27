@@ -24,8 +24,8 @@ export default {
     }
   },
   beforeRouteEnter (to, from, next) {
-    const getSale = axios.get(`http://localhost:3000/sales/${to.params.id}`)
-    const getItems = axios.get(`http://localhost:3000/items?sale_id=${to.params.id}`)
+    const getSale = axios.get(`${SERVER_URL}/sales/${to.params.id}`)
+    const getItems = axios.get(`${SERVER_URL}/items?sale_id=${to.params.id}`)
 
     Promise.all([getSale, getItems])
     .then((responses) => {
