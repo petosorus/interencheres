@@ -22,6 +22,10 @@ Vue.use(VueRouter)
     path: '/search',
     name: 'Search',
     component: Search
+  },
+  { 
+    path: '*',
+    redirect: 'Search'
   }
 ]
 
